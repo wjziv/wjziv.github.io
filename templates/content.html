@@ -1,0 +1,8 @@
+{% extends "blocks/base.html" %}
+
+{% block body %}
+{{ page }}
+<a href="{{ url_for('landing_page', landing=page.path.split('/')[0]) }}">
+  < {{ page.path.split('/')[0].capitalize() }}
+</a>
+{% endblock %}

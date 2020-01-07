@@ -1,0 +1,36 @@
+{% extends "blocks/base.html" %}
+
+{% block body %}
+  <article class="card">
+    {{ page|safe }}
+    <!--div style="text-align:center;"-->
+      <!--h4>Search by Tag</h4-->
+      <!--input id="tag-search" type="text" placeholder="Search by Tag..."-->
+    <!--/div-->
+    {% if contents %}
+    <dl style="width:100%;">
+      {% for page in contents|sort(attribute='date', reverse=True) %}
+      <dt id="post"> 
+        <p> 
+          <a class="stack pseudo button" href="{{ url_for('content_page', path=page.path) }}">
+            {{ page.title }}
+          </a>
+          <i style="font-size:small;vertical-align:middle;">
+            {{ page.date }}
+          </i>
+          {% if page.tags %}
+          {% for tag in page.tags %}
+          &nbsp;
+          <kbd class="tag">{{ tag }}</kbd>
+          {% endfor %}
+          {% endif %}
+        </p>
+      </dt>
+      <dd>
+        {{ page.description }}
+      </dd>
+      {% endfor %}
+      </dl>
+    {% endif %}
+  </article>
+{% endblock %}

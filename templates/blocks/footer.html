@@ -1,0 +1,12 @@
+<footer>
+  {% for site in social %}
+  {% for name, url in site.items() %}
+  <a class="footer-link" href="{{ url }}" target="_blank" style="text-decoration: none;">
+    <img src="{{ get_icon(name,'fontawesome') }}"/>
+  </a>
+  {% endfor %}
+  {% endfor %}
+  <p>
+    CSS: <a href="https://kimeiga.github.io/bahunya/" target="_blank">Bahunya</a>
+  </p>
+</footer>
