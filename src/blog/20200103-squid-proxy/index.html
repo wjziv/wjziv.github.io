@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Basics -->
+<title>Walter Zielenski</title>
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155539992-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155539992-1');
+</script>
+
+<!-- CSS || Chota CSS || https://jenil.github.io/chota/ -->
+<script src="https://kit.fontawesome.com/54b4256db9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css"/>
+
+<!-- https://prismjs.com/ Code Text Formatting -->
+<script src="/static/js/prism.js"></script>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Custom Files -->
+<script src="/static/js/script.js"></script>
+<link rel="stylesheet" href="/static/css/style.css">
+
+<!-- HTML Meta Tags -->
+<meta name="description" content="Backend Developer">
+<meta name="keywords" content="Backend, Programming, Developer, Python, SQL, GCP, Google Cloud Platform, Baking, Super Cool Dude">
+<meta name="author" content="Walter Zielenski">
+
+<!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Walter Zielenski">
+<meta itemprop="description" content="Backend Developer">
+<meta itemprop="image" content="/static/img/wjziv.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Walter Zielenski">
+<meta property="og:description" content="Backend Developer">
+<meta property="og:image" content="/static/img/wjziv.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="/static/img/wjziv.png">
+<meta name="twitter:title" content="Walter Zielenski">
+<meta name="twitter:description" content="Backend Developer">
+<meta name="twitter:image" content="/static/img/wjziv.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="/static/img/wjziv.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Walter Zielenski">
+<link rel="apple-touch-icon-precomposed" href="/static/img/wjziv.png">
+</head>
+<body><header>
+  <nav>
+    <a href="/">
+      <h1>
+        <img src="/static/img/wjziv.png" style="display:inline-block;vertical-align:middle;max-height:32px;" class="logo"/>
+        &nbsp; Walter Zielenski
+      </h1>
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" style="font-size:larger;">&#9776;</label>
+    
+    <a href="/blog/">
+      blog
+    </a>
+    
+    <a href="/projects/">
+      projects
+    </a>
+    
+    <a href="/recipes/">
+      recipes
+    </a>
+    
+  </nav>
+  <h1>
+    Squid Proxy Server Setup
+  </h1>
+  
+  <h6>
+    2020-01-03
+  </h6>
+
+  
+  <p>
+  
+  <kbd>GCP</kbd>
+  
+  <kbd>Squid Proxy</kbd>
+  
+  <kbd>How-to</kbd>
+  
+  
+  </p>
+  
+
+</header>
+  <main>
+    <article>
+    
+<p>These instructions assume you have successfully completed the following:
+1. Opened a GCP account.
+2. Set up a VM with a static IP address and open HTTP/HTTPS ports.</p>
+<p>The goal of these instrctions is to create a functional proxy VM on GCP.</p>
+<hr />
+<p>Setting up the port rules:</p>
+<p>With you VM already created and tagged correctly, navigate to <code>VPC Network</code> &gt; <code>Firewall Rules</code>. Here, a number of networking rules have been created. We will be editing the HTTP/S port rules.</p>
+<ul>
+<li>default-allow-http</li>
+<li>default-allow-https</li>
+</ul>
+<p>Within both of these  rules, add <code>3128</code> to the <code>tcp</code> and <code>udp</code> port lists.</p>
+<hr />
+<p>Setting up the VM:</p>
+<p>Within CentOS 8, Squid comes with the basic repositories. Beyond the amount of RAM you provide your server (and therefore your users), there are no dependencies to consider. Squid is already a part of the basic Repositories which come with the OS.</p>
+<p>Start by updating the repositories within the yum installer:</p>
+<pre class="codehilite"><code class="language-bash">sudo yum -y update</code></pre>
+
+
+<p>Next, install and initialize Squid:</p>
+<pre class="codehilite"><code class="language-bash">sudo yum -y install squid
+sudo systemctl start squid
+sudo systemctl enable squid</code></pre>
+
+
+<p>Check that the service is running with the following command:</p>
+<pre class="codehilite"><code class="language-bash">sudo systemctl status squid</code></pre>
+
+
+<p>The result should look like this:</p>
+<pre class="codehilite"><code class="language-bash">● squid.service - Squid caching proxy
+   Loaded: loaded (/usr/lib/systemd/system/squid.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2019-12-06 17:38:04 UTC; 5min ago
+ Main PID: 2062 (squid)
+    Tasks: 3 (limit: 3517)
+   Memory: 20.5M
+   CGroup: /system.slice/squid.service
+           ├─2062 /usr/sbin/squid -f /etc/squid/squid.conf
+           ├─2064 (squid-1) --kid squid-1 -f /etc/squid/squid.conf
+           └─2065 (logfile-daemon) /var/log/squid/access.log
+
+Dec 06 17:38:04 alx-vm001 systemd[1]: Starting Squid caching proxy...
+Dec 06 17:38:04 alx-vm001 systemd[1]: Started Squid caching proxy.
+Dec 06 17:38:04 alx-vm001 squid[2062]: Squid Parent: will start 1 kids
+Dec 06 17:38:04 alx-vm001 squid[2062]: Squid Parent: (squid-1) process 2064 started</code></pre>
+
+
+<p>For future reference, note the following important files and locations:</p>
+<ul>
+<li>Squid configuration file: <code>/etc/squid/squid.conf</code></li>
+<li>Squid Access log: <code>/var/log/squid/access.log</code></li>
+<li>Squid Cache log: <code>/var/log/squid/cache.log</code></li>
+</ul>
+<p>Technically, Squid is up and running right now! Congrats.</p>
+<p>However, nobody is able to access it quite yet. While one may specifically allow particular IP addresses to access their proxy, we would like to autenticate using user/pass.</p>
+<p>To enable Client Authentication, install httpd-tools:</p>
+<pre class="codehilite"><code class="language-bash">sudo yum -y install httpd-tools</code></pre>
+
+
+<p>And create a place to store user credentials, allow Squid's default username to access/own this file:</p>
+<pre class="codehilite"><code class="language-bash">sudo touch /etc/squid/passwd
+sudo chown squid: /etc/squid/passwd</code></pre>
+
+
+<p>Now create your first user (here, it's called <code>proxyusername</code>):</p>
+<pre class="codehilite"><code class="language-bash">sudo htpasswd /etc/squid/passwd proxyusername
+
+New password:
+Re-type new password:
+Adding password for user proxyusername</code></pre>
+
+
+<p>Now that a user/password account is created, let Squid know this iswhat it should be looking for in a user. Open the config file and add the following:</p>
+<pre class="codehilite"><code class="language-bash">sudo vim /etc/squid/squid.conf</code></pre>
+
+
+<p>When adding items to the config file, locate the line: 
+<code>INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS</code></p>
+<p>Add the following beneath any ACL permissions you've created.</p>
+<pre class="codehilite"><code class="language-bash">## Enable Client Authenication
+## These definitions require authentication every 2 hours per user.
+## There are 100 active authenticators.
+auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/passwd
+auth_param basic children 100
+auth_param basic realm Squid Basic Authentication
+auth_param basic credentialsttl 2 hours
+acl auth_users proxy_auth REQUIRED
+http_access allow auth_users
+
+## Allow more than one user to access the proxy
+## provided the same credentials, simultaneously.
+authenticate_ip_ttl 3 seconds # Remember the user's IP address for 3s
+acl max_user max_user_ip -s 10000 # Allow 10000 distinct IP addresses to one account.</code></pre>
+
+
+<p>Finally, restart Squid.</p>
+<pre class="codehilite"><code class="language-bash">sudo systemctl restart squid
+sudo service squid restart</code></pre>
+
+
+<p>Finally, to use your new proxy service:</p>
+<pre class="codehilite"><code class="language-python">import requests
+proxies = {
+    'http':f'http://{user}:{passwd}@{static_ip}:3128',
+    'https':f'https://{user}:{passwd}@{static_ip}:3128'
+}
+requests.get(url,proxies=proxies).json()</code></pre>
+
+
+<p>Reference:</p>
+<ul>
+<li>https://www.tecmint.com/install-squid-http-proxy-on-centos-7/</li>
+</ul>
+<hr />
+<p>Check usage/access:</p>
+<p>Are you concerned that your proxy is in use by nefarious hackers?</p>
+<ol>
+<li>Log into GCP and navigate to GCE/VMs.</li>
+<li>SSH into the sftp/proxy server.</li>
+<li><code>sudo vim /var/log/squid/access.log</code></li>
+</ol>
+<p>Ideally, the only rows which contain a "/2xx" response or evidence that they were able to log in using the "data2-proxy" username were valid requests from SellUP devices (likely GCP VMs or developers debugging a rigid ETL). If unsure, the most one may do in this scenario is lookup the public IP origin online.</p>
+<p>References:</p>
+<ul>
+<li>http://www.squid-cache.org/Doc/config/access_log/</li>
+<li>https://wiki.squid-cache.org/SquidFaq/SquidLogs</li>
+</ul>
+<p>Squid Guide:
+https://www.tecmint.com/install-squid-http-proxy-on-centos-7/</p>
+<p>SFTP Guides:
+https://thelinuxcode.com/enable-configure-sftp-centos-7/
+https://medium.com/@biancalorenpadilla/sftp-google-cloud-storage-d559fd16e074
+** Note that the restrictions made in the thelinuxcode.com link are great for security.</p>
+<a href="/blog/">
+  < Blog
+</a>
+
+    </article>
+  </main><footer>
+  
+  
+  <a class="footer-link" href="http://twitter.com/wjziv" target="_blank" style="text-decoration: none;">
+    <img src="https://icongr.am/fontawesome/twitter.svg?size=32&amp;color=F5F5F5"/>
+  </a>
+  
+  
+  
+  <a class="footer-link" href="http://github.com/wjziv" target="_blank" style="text-decoration: none;">
+    <img src="https://icongr.am/fontawesome/github.svg?size=32&amp;color=F5F5F5"/>
+  </a>
+  
+  
+  
+  <a class="footer-link" href="https://www.linkedin.com/in/walterjzielenskiiv/" target="_blank" style="text-decoration: none;">
+    <img src="https://icongr.am/fontawesome/linkedin.svg?size=32&amp;color=F5F5F5"/>
+  </a>
+  
+  
+  
+  <a class="footer-link" href="mailto:walterzielenski@gmail.com" target="_blank" style="text-decoration: none;">
+    <img src="https://icongr.am/fontawesome/envelope.svg?size=32&amp;color=F5F5F5"/>
+  </a>
+  
+  
+  <p>
+    CSS: <a href="https://kimeiga.github.io/bahunya/" target="_blank">Bahunya</a>
+  </p>
+</footer>
+</body>
+</html>
