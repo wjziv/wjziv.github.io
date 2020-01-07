@@ -375,6 +375,30 @@ if __name__ == &quot;__main__&quot;:
         freezer.freeze() # New
     else: # New
         app.run(port=8000)</code></pre>
+
+
+<p>Adding these few elements from Frozen-Flask allows us to create the static HTML pages we'd like to push to Github. Freeze your web app by heading to your terminal and typing <code>python run.py freeze</code>.</p>
+<p>A new folder called <code>build/</code> will appear in your directory:</p>
+<pre class="codehilite"><code class="language-text">my_website/
+- requirements.txt
+- run.py
+  pages/
+  - blog_post_1.md
+  templates/
+  - base.html
+  - post.html
+  - index.html
+  build/
+  - index.html
+    blog_post_1/
+    - index.html</code></pre>
+
+
+<h4>Hosting on Github</h4>
+<h4>Other Concerns</h4>
+<h5>Custom Domain</h5>
+<h5>Using Flask Extensions</h5>
+<h5>Exposing Python Functions to Jinja</h5>
 <a href="/blog/">
   < Blog
 </a>

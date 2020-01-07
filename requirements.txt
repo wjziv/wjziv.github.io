@@ -1,4 +1,0 @@
-Flask==1.1.1
-Flask-Flatpages==0.7.1
-Frozen-Flask==0.15
-pyyaml==5.2
