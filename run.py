@@ -99,4 +99,4 @@ if __name__ == '__main__':
     if "freeze" in sys.argv:
         freezer.freeze()
     else:
-        app.run(port=8000)
+        app.run(port=8080)
