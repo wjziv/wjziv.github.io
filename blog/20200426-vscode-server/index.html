@@ -114,7 +114,7 @@
   <main>
     <article>
     
-<h1>Goal</h1>
+<h3>Goal</h3>
 <p>Using Google Cloud Platform, host an instance of VSCode to access via the browser for ~$25-$50/month.
 More specifically, we'll be hosting an instance of <a href="https://github.com/cdr/code-server">Code-Server</a> on GCP in a constantly-running VM.</p>
 <p>This works as an alternative to the cloud-development environments which may limit the developer in some way:
@@ -122,9 +122,9 @@ More specifically, we'll be hosting an instance of <a href="https://github.com/c
 - Working Hours in a given period
 - Number of projects
 - Repository integration.</p>
-<h1>Requirements</h1>
+<h3>Requirements</h3>
 <p>This tutorial assumes you have already set up a GCP account and enabled billing.</p>
-<h1>Short Description:</h1>
+<h3>Short Description:</h3>
 <ul>
 <li>Make GCP VM</li>
 <li>Install Code-Server.</li>
@@ -132,7 +132,9 @@ More specifically, we'll be hosting an instance of <a href="https://github.com/c
 <li>Write start-up script, scheduled by Crontab.</li>
 <li>Associate with a subomain.</li>
 </ul>
-<h1>Steps</h1>
+<h3>How To</h3>
+<p>Head over to </p>
+<h3>Steps</h3>
 <ol>
 <li>GCP &gt; GCE &gt; Create VM</li>
 <li>Design your instance.
@@ -202,24 +204,32 @@ Save your settings and wait. It may take a few minutes/hours for your domain to 
 <p>This should be all it takes to get your own, custom cloud-hosted development environment up and running for about the price of any other unlimited cloud-dev env!</p>
 <p>Navigate to your dev env using:
 - Your external IP and port: <code>12.34.56.78:PORT</code>.
-- Your custom domain and port (with cert): https://subdomain.yourdomain.com:PORT
-- Your custom domain and port (without cert): http://subdomain.yourdomain.com:PORT
-- Your custom domain, assuming port 443 (with cert): http://subdomain.yourdomain.com</p>
-<h1>References and Resources</h1>
+- Your custom domain and port (with cert): <code>https://subdomain.yourdomain.com:PORT</code>
+- Your custom domain and port (without cert): <code>http://subdomain.yourdomain.com:PORT</code>
+- Your custom domain, assuming port 443 (with cert): <code>http://subdomain.yourdomain.com</code></p>
+<h3>References and Resources</h3>
 <p>Note that there are plenty of alternative softwares for a few of these services:</p>
-<h2>Cloud Based IDEs</h2>
-<p><a href="https://github.com/cdr/code-server">Code-Server</a>
-<a href="https://github.com/cdr/sshcode">SSH-Code</a>
-<a href="https://theia-ide.org/">Theia Ecplise</a></p>
-<h2>Containerized Solutions</h2>
-<p><a href="https://hub.docker.com/r/codercom/code-server">Code-Server</a>
-<a href="https://hub.docker.com/r/linuxserver/code-server">Linux-Server</a></p>
-<h2>Cloud Based Development as a Service</h2>
-<p><a href="https://www.gitpod.io/">Gitpod</a>
-<a href="https://stackblitz.com/">Stackblitz</a>
-<a href="https://codesandbox.io/">CodeSandbox</a></p>
-<h2>GCP Shell Options</h2>
-<p><a href="https://cloud.google.com/shell">Google Cloud Shell</a></p>
+<h5>Cloud Based IDEs</h5>
+<ul>
+<li><a href="https://github.com/cdr/code-server">Code-Server</a></li>
+<li><a href="https://github.com/cdr/sshcode">SSH-Code</a></li>
+<li><a href="https://theia-ide.org/">Theia Ecplise</a></li>
+</ul>
+<h5>Containerized Solutions</h5>
+<ul>
+<li><a href="https://hub.docker.com/r/codercom/code-server">Code-Server</a></li>
+<li><a href="https://hub.docker.com/r/linuxserver/code-server">Linux-Server</a></li>
+</ul>
+<h5>Cloud Based Development as a Service</h5>
+<ul>
+<li><a href="https://www.gitpod.io/">Gitpod</a></li>
+<li><a href="https://stackblitz.com/">Stackblitz</a></li>
+<li><a href="https://codesandbox.io/">CodeSandbox</a></li>
+</ul>
+<h5>GCP Shell Options</h5>
+<ul>
+<li><a href="https://cloud.google.com/shell">Google Cloud Shell</a></li>
+</ul>
 <a href="/blog/">
   < Blog
 </a>
