@@ -41,14 +41,18 @@ extensions = [
     'codehilite',
     'fenced_code',
     'tables',
-    'def_list'
+    'def_list',
+    'sane_lists'
 ]
 
 
 def renderer(text):
     """Inject the markdown rendering into the jinga template"""
     rendered_body = render_template_string(text)
-    markdown_body = markdown.markdown(rendered_body, extensions=extensions)
+    markdown_body = markdown.markdown(
+        rendered_body,
+        extensions=extensions
+    )
     return markdown_body
 
 
