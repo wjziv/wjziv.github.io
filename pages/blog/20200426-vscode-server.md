@@ -38,6 +38,7 @@ Copy and paste the following to update and install any dependencies we'll be nee
 `sudo apt update && sudo apt upgrade && sudo apt -y install wget curl certbot screen`
 
 A note on the dependencies we're installing:
+
 - `wget`: A common HTTP/HTTPS/FTP client for retriving data from servers.
 - `curl`: Another client for communicating with servers, for a larger number of protocols.
 - `certbot`: A tool for retreiving SSL certificates; only necessary if you intend to connect to your VM over HTTPS.
@@ -50,6 +51,7 @@ curl -s https://api.github.com/repos/cdr/code-server/releases/latest | grep "bro
 ```
 
 Let's pick it apart, piece by piece:
+
 - `curl -s https://api.github.com/repos/cdr/code-server/releases/latest`: Make a request for the url provided without providing any output. (The URL provided is the permalink to the latest releases made for the project hosting the software we're isntalling on our VM.)
 - `grep "browser_download_url"`: given the response from above, seek out lines which contain the given string.
 - `grep "linux-x86_64"`: given the response from above, seek out lines which contain the given string.
@@ -81,6 +83,7 @@ done
 ```
 
 Note the following:
+
 - Code-Server allows the user to set up a password for accessing their coding environment. Provide a custom one by declaring the `PASSWORD` variable on the same line.
 - `--port 443`: this is the default port which HTTPS requests use. IF you plan on using a clean URL to access your VM and have no intentions to set up a reverse proxy of some kind, this is necessary. Otherwise, feel free to set it to something else, and navigate to it via `yourwebsite.com:PORT` or `12.34.56.78:PORT`. Take note of your selection, as it will be needed later.
 - `--cert "/etc/path..."`: if you have an SSL certificate to provide, enter the path here.
@@ -95,6 +98,7 @@ Navigate to (GCP > VPC Network > External IP Addresses) and find the VM you rece
 Restart your VM.
 
 Optionally make your VM accessible through the web via a custom domain which you may already have by performing the following:
+
 - Navigate to your domain admin dashboard
 - Add a new Custom resource record
 - Type: A
