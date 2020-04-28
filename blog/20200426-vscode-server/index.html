@@ -137,24 +137,28 @@ More specifically, we'll be hosting an instance of <a href="https://github.com/c
 <p>Press "Create Instance" and wait for it to finish building. Once complete, press the SSH button.</p>
 <p>Copy and paste the following to update and install any dependencies we'll be needing shortly.</p>
 <p><code>sudo apt update &amp;&amp; sudo apt upgrade &amp;&amp; sudo apt -y install wget curl certbot screen</code></p>
-<p>A note on the dependencies we're installing:
-- <code>wget</code>: A common HTTP/HTTPS/FTP client for retriving data from servers.
-- <code>curl</code>: Another client for communicating with servers, for a larger number of protocols.
-- <code>certbot</code>: A tool for retreiving SSL certificates; only necessary if you intend to connect to your VM over HTTPS.
-- <code>screen</code>: Tool for running orphaned programs, in that they are not tethered to any specific terminal instance.</p>
+<p>A note on the dependencies we're installing:</p>
+<ul>
+<li><code>wget</code>: A common HTTP/HTTPS/FTP client for retriving data from servers.</li>
+<li><code>curl</code>: Another client for communicating with servers, for a larger number of protocols.</li>
+<li><code>certbot</code>: A tool for retreiving SSL certificates; only necessary if you intend to connect to your VM over HTTPS.</li>
+<li><code>screen</code>: Tool for running orphaned programs, in that they are not tethered to any specific terminal instance.</li>
+</ul>
 <p>Use the following bash commands to download the lastest release of VSCode for the browser (hosted on coder/code-server) and extract it to your VM's home directory. Feel free to copy/paste the whole script:</p>
 <pre class="codehilite"><code class="language-bash">curl -s https://api.github.com/repos/cdr/code-server/releases/latest | grep &quot;browser_download_url&quot; | grep &quot;linux-x86_64&quot; | cut -d '&quot;' -f4 | wget -qi - -O code-server.tar.gz &amp;&amp; mkdir code-server &amp;&amp; tar -xzf code-server.tar.gz -C code-server --strip-components 1 &amp;&amp; rm code-server.tar.gz</code></pre>
 
 
-<p>Let's pick it apart, piece by piece:
-- <code>curl -s https://api.github.com/repos/cdr/code-server/releases/latest</code>: Make a request for the url provided without providing any output. (The URL provided is the permalink to the latest releases made for the project hosting the software we're isntalling on our VM.)
-- <code>grep "browser_download_url"</code>: given the response from above, seek out lines which contain the given string.
-- <code>grep "linux-x86_64"</code>: given the response from above, seek out lines which contain the given string.
-- <code>cut -d '"' -f4</code>: split the response from above, using <code>"</code> as a delimiter. Return the 4th field after splitting.
-- <code>wget -qi - -O code-server.tar.gz</code>: given the response from above, make a request for the url and rename it. Do this without providing output.
-- <code>mkdir code-server</code>: make a new folder called "code-server"
-- <code>tar -xzf code-server.tar.gz -C code-server --strip-components 1</code>: extract the contents of the last file we downloaded into the folder we just made.
-- <code>rm code-server.tar.gz</code>: delete the compressed file since we've extracted its contents.</p>
+<p>Let's pick it apart, piece by piece:</p>
+<ul>
+<li><code>curl -s https://api.github.com/repos/cdr/code-server/releases/latest</code>: Make a request for the url provided without providing any output. (The URL provided is the permalink to the latest releases made for the project hosting the software we're isntalling on our VM.)</li>
+<li><code>grep "browser_download_url"</code>: given the response from above, seek out lines which contain the given string.</li>
+<li><code>grep "linux-x86_64"</code>: given the response from above, seek out lines which contain the given string.</li>
+<li><code>cut -d '"' -f4</code>: split the response from above, using <code>"</code> as a delimiter. Return the 4th field after splitting.</li>
+<li><code>wget -qi - -O code-server.tar.gz</code>: given the response from above, make a request for the url and rename it. Do this without providing output.</li>
+<li><code>mkdir code-server</code>: make a new folder called "code-server"</li>
+<li><code>tar -xzf code-server.tar.gz -C code-server --strip-components 1</code>: extract the contents of the last file we downloaded into the folder we just made.</li>
+<li><code>rm code-server.tar.gz</code>: delete the compressed file since we've extracted its contents.</li>
+</ul>
 <p>For extra notes on the connectors between each command, see this <a href="https://unix.stackexchange.com/questions/159489/is-there-a-difference-between-and-and">Stack Overflow</a> Q/A.</p>
 <p>Optionally, if you'd like to access the server via HTTPS (and if you're planning on accessing this VM through a URL, you'd most likely be in this pool) install and execute certbot: <code>sudo certbot certonly --standalone</code>. <a href="https://certbot.eff.org/">Certbot</a> is a tool provided by the EFF to make handling SSL certificates fast and easy.  They'll take your email address to contact you should there be an emergency regarding access to your machine, but beyond this, consider them your cosigner to prove legitimacy. Take note of where the SSL certificate and key are saved. We'll need them later.</p>
 <p>Now let's create a script to execute code-server. Using your favorite code editor, create a file called <code>run-code-server.sh</code> and start editing:</p>
@@ -172,21 +176,25 @@ sleep 3
 done</code></pre>
 
 
-<p>Note the following:
-- Code-Server allows the user to set up a password for accessing their coding environment. Provide a custom one by declaring the <code>PASSWORD</code> variable on the same line.
-- <code>--port 443</code>: this is the default port which HTTPS requests use. IF you plan on using a clean URL to access your VM and have no intentions to set up a reverse proxy of some kind, this is necessary. Otherwise, feel free to set it to something else, and navigate to it via <code>yourwebsite.com:PORT</code> or <code>12.34.56.78:PORT</code>. Take note of your selection, as it will be needed later.
-- <code>--cert "/etc/path..."</code>: if you have an SSL certificate to provide, enter the path here.
-- <code>--cert-key "/etc/path..."</code>: if you have an SSL certificate to provide, enter the path here.</p>
+<p>Note the following:</p>
+<ul>
+<li>Code-Server allows the user to set up a password for accessing their coding environment. Provide a custom one by declaring the <code>PASSWORD</code> variable on the same line.</li>
+<li><code>--port 443</code>: this is the default port which HTTPS requests use. IF you plan on using a clean URL to access your VM and have no intentions to set up a reverse proxy of some kind, this is necessary. Otherwise, feel free to set it to something else, and navigate to it via <code>yourwebsite.com:PORT</code> or <code>12.34.56.78:PORT</code>. Take note of your selection, as it will be needed later.</li>
+<li><code>--cert "/etc/path..."</code>: if you have an SSL certificate to provide, enter the path here.</li>
+<li><code>--cert-key "/etc/path..."</code>: if you have an SSL certificate to provide, enter the path here.</li>
+</ul>
 <p>Start Crontab to schedule your script to execute upon start-up: <code>crontab -e</code>. If this is your first time opening crontab, it will ask you to select a preferred editor, which can be changed at any time. Once inside your crontab file, add the following line: <code>@reboot screen -m -d sh $HOME/run-code-server.sh</code>. Save and exit.</p>
 <p>Close the SSH terminal and navigate to (GCP &gt; VPC Network &gt; Firewall Rules &gt; Create a new Firewall Rule) to create a new firewall setting. Name it whatever you like and set a priority ~1000. Add your port to the TCP port section. Should you be running applications on extra ports on this VM, it may be worthwhile to add a few others: 8080, 8888, 8443, or whatever is preferred to you.</p>
 <p>Navigate to (GCP &gt; VPC Network &gt; External IP Addresses) and find the VM you recently created; under the <code>Type</code> column, change the value from "Ephemeral" to "Static". This will keep your external IP address constant, and ease access to it. Take note of this IP address for later.</p>
 <p>Restart your VM.</p>
-<p>Optionally make your VM accessible through the web via a custom domain which you may already have by performing the following:
-- Navigate to your domain admin dashboard
-- Add a new Custom resource record
-- Type: A
-- Name: the subdomain you'd prefer to use for your development VM (if any).
-- Data/IP Address: the static IP address of your VM.</p>
+<p>Optionally make your VM accessible through the web via a custom domain which you may already have by performing the following:</p>
+<ul>
+<li>Navigate to your domain admin dashboard</li>
+<li>Add a new Custom resource record</li>
+<li>Type: A</li>
+<li>Name: the subdomain you'd prefer to use for your development VM (if any).</li>
+<li>Data/IP Address: the static IP address of your VM.</li>
+</ul>
 <p>Save your settings and wait. It may take a few minutes/hours for your domain to be set up.</p>
 <p>This should be all it takes to get your own, custom cloud-hosted development environment up and running for about the price of any other unlimited cloud-dev env!</p>
 <p>Navigate to your dev env using:
