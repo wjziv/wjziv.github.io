@@ -8,7 +8,7 @@ tags:
     - IDE
     - Cloud
 
-# Goal
+### Goal
 Using Google Cloud Platform, host an instance of VSCode to access via the browser for ~$25-$50/month.
 More specifically, we'll be hosting an instance of [Code-Server](https://github.com/cdr/code-server) on GCP in a constantly-running VM.
 
@@ -18,17 +18,20 @@ This works as an alternative to the cloud-development environments which may lim
 - Number of projects
 - Repository integration.
 
-# Requirements
+### Requirements
 This tutorial assumes you have already set up a GCP account and enabled billing.
 
-# Short Description:
+### Short Description:
 - Make GCP VM
 - Install Code-Server.
 - Set up SSL Certificate via Certbot.
 - Write start-up script, scheduled by Crontab.
 - Associate with a subomain.
 
-# Steps
+### How To
+Head over to 
+
+### Steps
 1. GCP > GCE > Create VM
 2. Design your instance.
     My preference is for E2 (2 Cores, 4GB RAM) running Debian 10 Buster, 10GB storage. This set-up costs ~$25/month at the time of writing.
@@ -102,27 +105,27 @@ This should be all it takes to get your own, custom cloud-hosted development env
 
 Navigate to your dev env using:
 - Your external IP and port: `12.34.56.78:PORT`.
-- Your custom domain and port (with cert): https://subdomain.yourdomain.com:PORT
-- Your custom domain and port (without cert): http://subdomain.yourdomain.com:PORT
-- Your custom domain, assuming port 443 (with cert): http://subdomain.yourdomain.com
+- Your custom domain and port (with cert): `https://subdomain.yourdomain.com:PORT`
+- Your custom domain and port (without cert): `http://subdomain.yourdomain.com:PORT`
+- Your custom domain, assuming port 443 (with cert): `http://subdomain.yourdomain.com`
 
-# References and Resources
+### References and Resources
 
 Note that there are plenty of alternative softwares for a few of these services:
 
-## Cloud Based IDEs
-[Code-Server](https://github.com/cdr/code-server)
-[SSH-Code](https://github.com/cdr/sshcode)
-[Theia Ecplise](https://theia-ide.org/)
+##### Cloud Based IDEs
+- [Code-Server](https://github.com/cdr/code-server)
+- [SSH-Code](https://github.com/cdr/sshcode)
+- [Theia Ecplise](https://theia-ide.org/)
 
-## Containerized Solutions
-[Code-Server](https://hub.docker.com/r/codercom/code-server)
-[Linux-Server](https://hub.docker.com/r/linuxserver/code-server)
+##### Containerized Solutions
+- [Code-Server](https://hub.docker.com/r/codercom/code-server)
+- [Linux-Server](https://hub.docker.com/r/linuxserver/code-server)
 
-## Cloud Based Development as a Service
-[Gitpod](https://www.gitpod.io/)
-[Stackblitz](https://stackblitz.com/)
-[CodeSandbox](https://codesandbox.io/)
+##### Cloud Based Development as a Service
+- [Gitpod](https://www.gitpod.io/)
+- [Stackblitz](https://stackblitz.com/)
+- [CodeSandbox](https://codesandbox.io/)
 
-## GCP Shell Options
-[Google Cloud Shell](https://cloud.google.com/shell)
+##### GCP Shell Options
+- [Google Cloud Shell](https://cloud.google.com/shell)
