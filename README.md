@@ -3,6 +3,7 @@
 [My website!](https://wjziv.com/)
 
 Used as a blog, public note-taking space, and online resume.
+The static website is served from the `static` branch, leaving the `master` branch for dynamic code updates.
 
 ## TODO:
 - Include social media tags in the menu bar.
