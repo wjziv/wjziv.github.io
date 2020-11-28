@@ -1,10 +1,10 @@
-baseURL: https://wjziv.com
+baseURL: https://example.com
 languageCode: en-us
 defaultContentLanguage: en
-title: Walter Zielenski
-theme: wjziv-theme
-googleAnalytics: UA-155539992-1
-disqusShortname: wjziv
+title: Cupper
+theme: cupper-hugo-theme
+googleAnalytics: UA-123456789-1
+disqusShortname: yourdiscussshortname
 enableGitInfo: true
 
 taxonomies:
@@ -17,24 +17,26 @@ imaging:
   quality: 99
 
 params:
-  description: Software Engineer, Baker, Prolific Note-Taker.
-  homeMetaContent: Software Engineer, Baker, Prolific Note-Taker.
-  footer: <a href="mailto:walterzielenski@gmail.com" target="_blank">Contact</a>
+  description: An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project.
+  homeMetaContent: An accessibility-friendly Hugo theme, ported from the original Cupper project.
+  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
   # For more date formats see https://gohugo.io/functions/format/
-  dateFormat: 2 Jan 2006
+  dateFormat: Jan 2, 2006
   codePenUser: someUser
   katex: true
   hideHeaderLinks: false
   search: true
   customCss:
-    - css/style.css
+    - css/custom_01.css
+    - css/custom_02.css
   customJs:
-    - js/script.js
+    - js/custom_01.js
+    - js/custom_02.js
 
 menu:
   nav:
-    - name: Now
-      url: /now/
+    - name: Home
+      url: /
       weight: 1
     - name: Blog
       url: /post/
@@ -42,11 +44,11 @@ menu:
     - name: Tags
       url: /tags/
       weight: 3
-    - name: Resume
-      url: /resume/
+    - name: About
+      url: /about/
       weight: 4
-    - name: Resources
-      url: /resources/
+    - name: RSS
+      url: /index.xml
       weight: 5
 
 markup:
@@ -71,7 +73,7 @@ markup:
     codeFences: false
     hl_Lines: ""
     lineNoStart: 1
-    lineNos: true
+    lineNos: false
     lineNumbersInTable: true
     noClasses: true
     style: monokai

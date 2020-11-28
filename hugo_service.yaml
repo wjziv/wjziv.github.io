@@ -1,0 +1,3 @@
+# https://github.com/marketplace/actions/hugo-setup
+- name: Hugo setup
+  uses: peaceiris/actions-hugo@v2.4.13
