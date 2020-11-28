@@ -3,7 +3,7 @@ title: Now
 date: 2020-11-28
 ---
 
-[What is a Now Page?](nownownow)
+[What is a Now Page?][nownownow]
 
 ## Personal
 After talking with my sister [Tori](https://www.victoriaakman.com/), I've been reinspired to tackle the project of fixing my personal website. My primary goal here is to make it easier for myself to post new content on a self-hosted/created site.

@@ -4,7 +4,7 @@ title: Resume
 
 ## Experience
 
-### [Alchemy Worx](alchemyworx)
+### [Alchemy Worx][alchemyworx]
 > *Cloud Engineer*, January 2019 - Present
 
 - Lead the construction of the company's backend from scratch, primarily using **Python** on **GCP**.
@@ -21,7 +21,7 @@ title: Resume
 - **Visualize** journalistic story-lines for deeper understanding of the underlying data.
 - Used **data-mining** techniques on **unstructured** data to produce new sets for analysis and visualization using **BeautifulSoup** and custom-tuned **OCR** technologies.
 
-### [Agilex Fragrances](agilex)
+### [Agilex Fragrances][agilex]
 > *Perfume Technician | Perfumer-In-Training*, August 2016 - January 2019
 
 - Managed spectral data library and groomed data for analysis.
@@ -41,7 +41,7 @@ Google Cloud Platform, Serverless Architecture, MySQL
 
 ### Libraries | Frameworks
 Python
-:   [FastAPI](fastapi), [Flask](flask), [Pandas](pandas), [Matplotlib](mpl), [Python-PPTX](python-pptx), [Tesseract](tesseract), [Beautiful Soup](bs4)
+:   [FastAPI][fastapi], [Flask][flask], [Pandas][pandas], [Matplotlib][mpl], [Python-PPTX][python-pptx], [Tesseract][tesseract], [Beautiful Soup][bs4]
 
 Javascript
 :   D3, jQuery
