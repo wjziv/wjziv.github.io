@@ -27,3 +27,4 @@ The static website is served from the `static` branch, leaving the `master` bran
 - Mod code-text CSS to include a highlight.
 - Default darkmode.
 - Potentially change URL to 'walter.ski'
+- Add pdf version of resume (Parse attached markdown + modify header)
