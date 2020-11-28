@@ -31,4 +31,4 @@ jobs:
           user_name: wjziv
           user_email: walterzielenski@gmail.com
           publish_branch: static
-          cname: wjziv.com
+          cname: www.wjziv.com
