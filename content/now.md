@@ -16,4 +16,7 @@ My time outside of work has otherwise been focused on algorithmic trading strate
 I've completely overhauled the underlying reporting structure at Alchemy Worx, and I'm in the middle of ensuring backwards compatibility with previous work.
 
 
+Check out the [old versions][wjzivnow] of this page.
+
 [nownownow]: https://nownownow.com/about
+[wjzivnow]: https://github.com/wjziv/wjziv.github.io/commits/master/content/now.md
