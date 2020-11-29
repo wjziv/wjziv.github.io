@@ -1,4 +1,11 @@
 <nav id="patterns-nav" class="patterns" role="navigation">
+  <div class="theme-box">
+    <label for="themer">
+      {{ T "dark_theme" }} <input type="checkbox" id="themer" class="vh">
+      <!-- Shows "on" or "off" -->
+      <span aria-hidden="true"></span>
+    </label>
+  </div>
   {{ partial "social.html" . }}
   <h2 class="vh">{{ T "nav_main_navigation" }}</h2>
   <button id="menu-button" aria-expanded="false">
