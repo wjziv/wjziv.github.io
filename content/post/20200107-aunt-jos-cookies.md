@@ -8,4 +8,8 @@ tags:
     - christmas
 ---
 
-Everybody has an aunt with their own way of making *those* Italian Christmas cookies. This is my aunt's way of doing it.
+Everybody has an aunt with their own way of making *those* Italian Christmas cookies.
+
+And I've discovered that my Aunt Jo has a second recipe for making these cookies!
+
+I'll be back with the better of the two after a taste-test.
