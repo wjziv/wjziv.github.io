@@ -26,6 +26,11 @@ params:
   katex: true
   hideHeaderLinks: false
   search: true
+  social:
+    twitter: wjziv
+    github: wjziv
+    linkedin: walterjzielenskiiv
+    email: walterzielenski@gmail.com
   customCss:
     - css/style.css
   customJs:

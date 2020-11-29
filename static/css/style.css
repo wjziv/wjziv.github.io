@@ -1,12 +1,43 @@
 img[src*="#walter-index"] {
-    max-height: 400px;
-    float: center;
-    padding: 15px;
-    border-radius: 100%;
-    background-color: transparent;
-    margin: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-height: 400px;
+  float: center;
+  padding: 0px;
+  border-radius: 100%;
+  background-color: transparent;
+  opacity: 1;
+  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.nav-social {
+  height: auto;
+  width: 100%;
+  font-size: 0;
+  display: flex;
+  align-content: center;
+}
+
+.social-icon {
+  font-size: 30px;
+  margin: 6px;
+  display: inline-block;
+  vertical-align: center;
+  margin: auto;
+  text-decoration: none;
+  align-content: center;
+}
+
+.social-icon a {
+  vertical-align: center;
+  align-items: center;
+  border: none;
+  width:100%;
+  align-content: center;
+  margin: auto;
+}
+
+.social-icon a svg{
+  margin: auto; 
+}
