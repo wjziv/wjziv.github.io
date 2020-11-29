@@ -10,7 +10,7 @@
   />
   {{ end }}
   <ul class="patterns-list" id="list">
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range where .Pages.ByPublishDate.Reverse "Draft" "!=" true }}
     <li>
       <h2>
         <a href="{{ .RelPermalink }}">
@@ -22,7 +22,7 @@
           >
             <use xlink:href="#bookmark"></use>
           </svg>
-          {{ .Title }}
+          {{ .Title }} <small class="small">{{ .Description }}</small>
         </a>
       </h2>
     </li>
