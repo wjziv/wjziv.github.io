@@ -13,7 +13,7 @@ tags:
 
 The first time you make a bread loaf, I recommend you follow along the long-form recipe on the Serious Eats website to find out the 'right way' to execute things like a 'fold' or read up on tips for transferring dough from one bowl to another.
 
-As a solution to returning to the recipe later, I've summarized it using my preferred tools/ingredients. Everything outlined and linked to below are items I actuvely use everytime I bake bread.
+As a solution to returning to the recipe later, I've summarized it using my preferred tools/ingredients. Everything outlined and linked to below are items I actively use everytime I bake bread.
 
 {{< expandable label="What You'll Need" level="2" >}}
 - [KitchenAid Mixer](https://www.amazon.com/KitchenAid-KSM150PSGC-Artisan-Pouring-Shield/dp/B000AK3ZKW)
