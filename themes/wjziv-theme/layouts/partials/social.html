@@ -2,93 +2,93 @@
     {{ with .Site.Params.social.twitter }}
       <div class="social-icon">
         <a href="https://twitter.com/{{ . }}" target="_blank" title="Twitter">
-          {{ partial "super-tiny-icons/twitter.svg" }}
+          <i class="fab fa-twitter"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.gitlab }}
       <div class="social-icon">
         <a href="https://gitlab.com/{{ . }}" target="_blank" title="GitLab">
-          {{ partial "super-tiny-icons/gitlab.svg" }}
+          <i class="fab fa-gitlab"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.github }}
       <div class="social-icon">
         <a href="https://github.com/{{ . }}" target="_blank" title="GitHub">
-          {{ partial "super-tiny-icons/github.svg" }}
+          <i class="fab fa-github"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.linkedin }}
       <div class="social-icon">
         <a href="https://www.linkedin.com/in/{{ . }}" target="_blank" title="Linkedin">
-          {{ partial "super-tiny-icons/linkedin.svg" }}
+          <i class="fab fa-linkedin"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.instagram }}
       <div class="social-icon">
         <a href="https://www.instagram.com/{{ . }}" target="_blank" title="Instagram">
-          {{ partial "super-tiny-icons/instagram.svg" }}
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.reddit }}
       <div class="social-icon">
-        <a href="https://www.reddit.com/r/{{ . }}" target="_blank" title="Reddit">
-          {{ partial "super-tiny-icons/reddit.svg" }}
+        <a href="https://www.reddit.com/u/{{ . }}" target="_blank" title="Reddit">
+          <i class="fab fa-reddit"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.pinterest }}
       <div class="social-icon">
         <a href="https://www.pinterest.co.uk/{{ . }}/_saved/" target="_blank" title="Pinterest">
-          {{ partial "super-tiny-icons/pinterest.svg" }}
+          <i class="fas fa-pinterest"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.slackinvite }}
       <div class="social-icon">
         <a href="https://join.slack.com/t/{{ .name }}/shared_invite/{{ .code }}" target="_blank" title="Join Slack">
-          {{ partial "super-tiny-icons/slack.svg" }}
+          <i class="fab fa-slack"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.slackworkspace }}
       <div class="social-icon">
         <a href="https://{{ .name }}.slack.com" target="_blank" title="Slack">
-          {{ partial "super-tiny-icons/slack.svg" }}
+          <i class="fab fa-slack"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.facebook }}
       <div class="social-icon">
         <a href="https://facebook.com/{{ . }}" target="_blank" title="Facebook">
-          {{ partial "super-tiny-icons/facebook.svg" }}
+          <i class="fab fa-facebook-f"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.tiktok }}
       <div class="social-icon">
         <a href="https://www.tiktok.com/@{{ . }}" target="_blank" title="TikTok">
-          {{ partial "super-tiny-icons/tiktok.svg" }}
+          <i class="fab fa-tiktok"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.telephone }}
       <div class="social-icon">
         <a href="tel:{{ . }}" target="_blank" title="Call">
-          {{ partial "super-tiny-icons/phone.svg" }}
+          <i class="fas fa-phone"></i>
         </a>
       </div>
     {{ end }}
     {{ with .Site.Params.social.email }}
-      <div class="social-icon">
-        <a href="mailto:{{.}}" title="Email">
-          {{ partial "super-tiny-icons/email.svg" }}
-        </a>
-      </div>
+    <div class="social-icon">
+      <a href="mailto:{{.}}" target="_blank" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
     {{ end }}
     {{ with .Site.Params.social.misc }}
       {{ range . }}
@@ -104,7 +104,7 @@
     {{ with .Site.Params.social.discord }}
       <div class="social-icon">
         <a href="https://discord.com/channels/@me/{{ . }}" target="_blank" title="Discord">
-          {{ partial "super-tiny-icons/discord.svg" }}
+          <i class="fas fa-discord"></i>
         </a>
       </div>
     {{ end }}
