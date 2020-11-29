@@ -109,3 +109,6 @@ Pipfile.lock
 
 # VSCode
 .vscode/
+
+# Memorized Hugo execution on particular host:port
+run
