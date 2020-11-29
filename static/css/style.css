@@ -33,11 +33,32 @@ img[src*="#walter-index"] {
   vertical-align: center;
   align-items: center;
   border: none;
-  width:100%;
+  width: 100%;
   align-content: center;
+  text-decoration: none;
   margin: auto;
 }
 
-.social-icon a svg{
+.social-icon a i{
   margin: auto; 
+  text-decoration: none;
+}
+
+.theme-box {
+  width: 100%;
+  vertical-align: center;
+  align-content: center;
+  align-self: center;
+  padding: 5px;
+  width: 100%;
+  max-width: 175px;
+  margin: auto;
+}
+
+.theme-box label {
+  vertical-align: center;
+  align-content: center;
+  float: center;
+  width: 100%;
+  margin: auto;
 }
