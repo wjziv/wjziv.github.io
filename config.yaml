@@ -17,8 +17,8 @@ imaging:
   quality: 99
 
 params:
-  description: Software Engineer, Baker, Prolific Note-Taker.
-  homeMetaContent: Software Engineer, Baker, Prolific Note-Taker.
+  description: Software Engineer, Baker, and Prolific Note-Taker.
+  homeMetaContent: Software Engineer, Baker, and Prolific Note-Taker.
   footer: <a href="mailto:walterzielenski@gmail.com" target="_blank">Contact</a>
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: 2 Jan 2006
