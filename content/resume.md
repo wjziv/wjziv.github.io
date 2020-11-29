@@ -34,17 +34,18 @@ ___
 ## Skills
 
 ### Languages
-Python, Bash, SQL, Javascript, HTML, CSS, Nim, Go
+In order of fluency:
+:   Python, Bash, SQL, Javascript, Nim, Go
 
 ### Platforms | Tools
 Google Cloud Platform, Serverless Architecture, MySQL
 
 ### Libraries | Frameworks
 Python
-:   [FastAPI][fastapi], [Flask][flask], [Pandas][pandas], [Matplotlib][mpl], [Python-PPTX][python-pptx], [Tesseract][tesseract], [Beautiful Soup][bs4]
+:   [FastAPI], [Flask], [Pandas], [Matplotlib][mpl], [Python-PPTX], [Tesseract], [Beautiful Soup][bs4]
 
 Javascript
-:   D3, jQuery
+:   [D3], [jQuery]
 
 [alchemyworx]: https://www.alchemyworx.com/
 [agilex]: https://agilexfragrances.com
