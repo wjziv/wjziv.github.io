@@ -1,7 +1,6 @@
 ---
 title: Run VSCode in the Browser
 date: 2020-01-07
-description: Run VSCode in the Browser.
 tags:
     - how-to
     - vscode

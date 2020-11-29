@@ -1,7 +1,6 @@
 ---
 title: GCP VM Setup for Squid Proxy and SFTP
 date: 2020-01-03
-description: How to set up a VM for SFTP and Proxy
 tags: 
     - gcp
     - sftp
