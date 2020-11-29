@@ -5,7 +5,7 @@ title: Hi there!
 ![Walter](/images/walter_square.jpg#walter-index "Walter") 
 
 # I'm Walter.
-While also functioning as an online resume, this is where I keep notes and instructions as a convenience to myself and others when I find I'm repeatedly sharing the same information or looking up the same question more than a handful of times. This includes some dope recipes I've come across; I'll cite wherever I can.
+While also functioning as an online resume, this is where I keep notes and instructions as a convenience to myself and others. I find myself repeatedly sharing the same information or looking up the same question more than a handful of times, so collecting them publicly sounded like the best solution. This includes some dope recipes I've come across; I'll cite wherever I can.
 
 I graduated from RPI in 2016 with a degree in Chemical Engineering and a minor in Philosophy. Now I spend most of my time working on backend systems.
 
