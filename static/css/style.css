@@ -67,3 +67,9 @@ img[src*="#walter-index"] {
   color: #515151;
   font-size: smaller;
 }
+
+p img {
+  margin: auto;
+  float: center;
+  vertical-align: center;
+}
