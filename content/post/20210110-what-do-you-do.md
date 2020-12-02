@@ -1,6 +1,8 @@
 ---
 title: What Do You Do?
 description: if my answer starts with my job, am I boring?
+tags:
+    - introspect
 draft: true
 ---
 
