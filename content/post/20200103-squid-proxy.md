@@ -14,18 +14,16 @@ These instructions assume you have successfully completed the following:
 
 The goal of these instrctions is to create a functional proxy VM on GCP.
 
-___
-Setting up the port rules:
+## Port Rules
 
-With you VM already created and tagged correctly, navigate to `VPC Network` > `Firewall Rules`. Here, a number of networking rules have been created. We will be editing the HTTP/S port rules.
+With your VM already created and tagged correctly, navigate to `VPC Network` > `Firewall Rules`. Here, a number of networking rules have been created. We will be editing the HTTP/S port rules.
 
 - default-allow-http
 - default-allow-https
 
 Within both of these  rules, add `3128` to the `tcp` and `udp` port lists.
 
-___
-Setting up the VM:
+## VM Creation
 
 Within CentOS 8, Squid comes with the basic repositories. Beyond the amount of RAM you provide your server (and therefore your users), there are no dependencies to consider. Squid is already a part of the basic Repositories which come with the OS.
 
@@ -124,7 +122,7 @@ sudo systemctl restart squid
 sudo service squid restart
 ```
 
-Finally, to use your new proxy service:
+And now, to use your new proxy service, here is a sample written in Python:
 ```python
 import requests
 proxies = {
@@ -134,11 +132,7 @@ proxies = {
 requests.get(url,proxies=proxies).json()
 ```
 
-Reference:
-
-- https://www.tecmint.com/install-squid-http-proxy-on-centos-7/
-___
-Check usage/access:
+## Checking usage/access:
 
 Are you concerned that your proxy is in use by nefarious hackers?
 
@@ -148,17 +142,8 @@ Are you concerned that your proxy is in use by nefarious hackers?
 
 Ideally, the only rows which contain a "/2xx" response or evidence that they were able to log in using the "data2-proxy" username were valid requests from SellUP devices (likely GCP VMs or developers debugging a rigid ETL). If unsure, the most one may do in this scenario is lookup the public IP origin online.
 
-References:
-
+## References
+While this may benefit you as a quick walk-through, there are always cases to be made to dig deeper into documentation and other instructional posts!
 - http://www.squid-cache.org/Doc/config/access_log/
 - https://wiki.squid-cache.org/SquidFaq/SquidLogs
-
-
-
-Squid Guide:
-https://www.tecmint.com/install-squid-http-proxy-on-centos-7/
-
-SFTP Guides:
-https://thelinuxcode.com/enable-configure-sftp-centos-7/
-https://medium.com/@biancalorenpadilla/sftp-google-cloud-storage-d559fd16e074
-** Note that the restrictions made in the thelinuxcode.com link are great for security.
+- https://www.tecmint.com/install-squid-http-proxy-on-centos-7/

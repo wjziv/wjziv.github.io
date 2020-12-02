@@ -13,6 +13,7 @@ Assuming the user has already opened a GCP Account and enabled billing...
 
 The goal of this tutorial is to create a server which will be responsive to external HTTP requests for the purpose of serving external users a FTP server to drop files, or operate as an authenticated proxy.
 
+## VM Set Up
 Open Compute Engine > VM Instances. Createa new Instance. (NOTE. If you would like to create a template from which more instances can be made, perform the following steps from `Instance Templates`.)
 
 1. Name your VM/Instance/Template as you like.
@@ -30,7 +31,11 @@ Open Compute Engine > VM Instances. Createa new Instance. (NOTE. If you would li
     - https-sever
 7. Hit the `Create` button at the bottom.
 8. If you have opted to create a template first, enter `VM Instances` and create a VM from your new template.
-___
-Setting up a Static IP:
+
+## Static IP
 
 Navigate to `VPC Network` > `External IP addresses`. Find you newly created VM and under `Type`, select `Static`. The `External IP Address` shown in the table will be the way we communicate with this VM from now on.
+
+Seek applications for this VM in the following posts:
+- [Proxy Set Up](/20200103-squid-proxy/)
+- [SFTP Set Up](/20200104-sftp-server/)

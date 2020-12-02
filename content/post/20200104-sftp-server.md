@@ -8,8 +8,10 @@ tags:
     - how-to
 ---
 
+
 Assuming the user has already created a VM with a static IP address open to HTTP/S traffic...
 
+## Creating An SFTP Account
 SSH into the VM which you'd like to turn into a SFTP server.
 
 Create a new account which you'd like to provide to users to deposit files:
@@ -43,19 +45,21 @@ AllowTcpForwarding no
 X11Forwarding no
 ```
 
-
+## Restarting
 Finally, reset the ssh service:
 ```bash
 sudo systemctl restart sshd
 ```
 
-Access this SFTP directory at 
+Access this SFTP directory at `/uploads/` within your chosen SFTP client.
 
-References:
+## References
+As always, there's always reason to read documentation and other takes on how to do things!
 
-https://medium.com/@biancalorenpadilla/sftp-google-cloud-storage-d559fd16e074
-https://thelinuxcode.com/enable-configure-sftp-centos-7/
+- https://medium.com/@biancalorenpadilla/sftp-google-cloud-storage-d559fd16e074
+- https://thelinuxcode.com/enable-configure-sftp-centos-7/
 
-More detail on allowing GROUPS of users (This has not been implemented at ALX as of 12/6/19):
+## Further Reading
 
-https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/
+More detail on allowing GROUPS of users:
+- https://www.howtoforge.com/tutorial/how-to-setup-an-sftp-server-on-centos/
