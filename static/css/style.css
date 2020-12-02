@@ -68,8 +68,6 @@ img[src*="#walter-index"] {
   font-size: smaller;
 }
 
-p img {
+img {
   margin: auto;
-  float: center;
-  vertical-align: center;
 }
