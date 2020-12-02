@@ -19,7 +19,7 @@ imaging:
 params:
   description: Software Engineer, Baker, and Prolific Note-Taker.
   homeMetaContent: Software Engineer, Baker, and Prolific Note-Taker.
-  footer: Built with Hugo. Hosted on Github Pages. [Read More](/20201126-this-website/).
+  footer: Built with Hugo. Hosted on Github Pages.<br>[Read More](/20201126-this-website/)
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat: 2 Jan 2006
   codePenUser: someUser
