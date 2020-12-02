@@ -1,20 +1,25 @@
 ---
 title: Now
-date: 2020-11-28
 ---
 
 [What is a Now Page?][nownownow]
 
+Updated: 2020-12-02
+
 ## Personal
-After talking with my sister [Tori](https://www.victoriaakman.com/), I've been reinspired to tackle the project of fixing my personal website. My primary goal here is to make it easier for myself to post new content on a self-hosted/created site.
 
-I'm also considering getting my hands dirty in making sourdough. I haven't done any homework on the topic of starters, though.
+### Introspective
+Working from home, isolated with my partner, and limiting my time away from home has made me reflect on what makes me happy, my relationship with work, and how to answer the question "What do you do?" without involving my career.
 
-My time outside of work has otherwise been focused on algorithmic trading strategies. I've been trying to make an effort to find personal websites where relatively unknown (to me) [traders](http://theminimaltrader.com/automated-trading/) share their findings and experiences.
+Working on this website, I realize I have so much room to improve when it comes to streamed-conscious thought. I'm good at snippets and 5-second blurbs and wordlessly conceptualizing a big picture. Putting words to a larger concept and verbalizing what I have in mind without stringing an endless stream of 5-second blurbs is where I'll need to grow.
+
+### Activity
+I'm living out of NYC and the need to work on projects grows as I want to customize X part of my house, or fix Y because it broke for the 5th time in ~2 months of living here. It's a sensation I've missed and haven't experienced since I lived in NJ, before apartment-living in NYC!
 
 ## Work
 I've completely overhauled the underlying reporting structure at Alchemy Worx, and I'm in the middle of ensuring backwards compatibility with previous work.
 
+___
 
 Check out the [old versions][wjzivnow] of this page.
 
