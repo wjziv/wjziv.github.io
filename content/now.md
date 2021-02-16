@@ -4,20 +4,22 @@ title: Now
 
 [What is a Now Page?][nownownow]
 
-Updated: 2020-12-02
+Updated: 2021-02-16
 
 ## Personal
 
 ### Introspective
-Working from home, isolated with my partner, and limiting my time away from home has made me reflect on what makes me happy, my relationship with work, and how to answer the question "What do you do?" without involving my career.
-
-Working on this website, I realize I have so much room to improve when it comes to streamed-conscious thought. I'm good at snippets and 5-second blurbs and wordlessly conceptualizing a big picture. Putting words to a larger concept and verbalizing what I have in mind without stringing an endless stream of 5-second blurbs is where I'll need to grow.
+I'm ever so close to finding my WFH grove. My office is *furnished* and beautiful. My cat is purring and finding his favorite spots in the house. I've identified a few things which fulfill and scratch my itch to 'do a productive, satisfying thing' outside of work.
 
 ### Activity
-I'm living out of NYC and the need to work on projects grows as I want to customize X part of my house, or fix Y because it broke for the 5th time in ~2 months of living here. It's a sensation I've missed and haven't experienced since I lived in NJ, before apartment-living in NYC!
+I've turned my active attention to improving organization for my work alongside my personal life. Jira for work and a terrible combo of [Keep](http://keep.google.com/)|GCal|Chicken scratch paper notes have been holding my focus together for 4 years. 
+
+I've managed to create for myself a solid system for Bookmarking and saving links in a meaningful way.
+
+Next up is identifying and trying a bunch of different Project Management Softwares out there; it feels like a proper Herculean task. But the high-striving goal of visualizing "what has to be done" is ever-so enticing1
 
 ## Work
-I've completely overhauled the underlying reporting structure at Alchemy Worx, and I'm in the middle of ensuring backwards compatibility with previous work.
+We're fleshing out some cool internal, stand-alone tools which are operating at high levels. We've build a solid foundation, and sight of the future is getting clearer and clearer!
 
 ___
 
