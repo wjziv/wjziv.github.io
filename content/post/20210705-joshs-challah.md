@@ -7,7 +7,7 @@ tags:
     - bread
 ---
 
-My sister's husband Josh didn't actually make this bread. It was only with him that I ever made challah for the first time. Proper credit goes to [Beth Ricanati](https://bethricanatimd.com/recipe).
+My sister's husband Josh didn't actually create this recipe for bread. It was only with him that I ever made challah for the first time. Proper credit goes to [Beth Ricanati](https://bethricanatimd.com/recipe).
 
 When we first made this recipe, it had the dense, squishy texture one might expect of an open-oven baked bread with little rise-time. I fully intend to return to this recipe with improvements with regard to rise time, baking in a dutch-oven, and weaving to fit inside a small pan.
 
