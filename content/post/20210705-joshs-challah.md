@@ -1,6 +1,6 @@
 ---
 title: Josh's* Challa Bread
-date: 2020-01-07
+date: 2021-07-05
 description: A twist on a traditional recipe found in a book!
 tags:
     - recipe
