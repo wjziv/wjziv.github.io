@@ -9,17 +9,18 @@ Updated: 2021-02-16
 ## Personal
 
 ### Introspective
-I'm ever so close to finding my WFH grove. My office is *furnished* and beautiful. My cat is purring and finding his favorite spots in the house. I've identified a few things which fulfill and scratch my itch to 'do a productive, satisfying thing' outside of work.
+I've become much more comfortable with the WFH groove I've found for myself. I've proposed to my beautifully capable girlfriend (now fiance). And I've re-watched nearly the entirety of [Chuck](https://www.imdb.com/title/tt0934814/).
+
+Things are looking up, and I'm looking forward to focusing this energy in all the right areas.
 
 ### Activity
-I've turned my active attention to improving organization for my work alongside my personal life. Jira for work and a terrible combo of [Keep](http://keep.google.com/)|GCal|Chicken scratch paper notes have been holding my focus together for 4 years. 
+Once again, I feel comfortable with how things are going!
+My self-organization is pointed at a small group of applications I've used previoously, along with a new one (Shout out to [Fullscreen For Google Tasks](https://fullscreen-for-googletasks.com/)!).
 
-I've managed to create for myself a solid system for Bookmarking and saving links in a meaningful way.
-
-Next up is identifying and trying a bunch of different Project Management Softwares out there; it feels like a proper Herculean task. But the high-striving goal of visualizing "what has to be done" is ever-so enticing1
+Up next is selling my house, saving up for the next one, and preparing for the wedding party of the century!
 
 ## Work
-We're fleshing out some cool internal, stand-alone tools which are operating at high levels. We've build a solid foundation, and sight of the future is getting clearer and clearer!
+I'm learning new technologies in front-end development; I'm expanding my own experience within the cloud ecosystem; and I'm working closely with Google representatives to ensure my usage of the platform is what it should and could be.
 
 ___
 
