@@ -5,29 +5,24 @@ title: Resume
 ## Experience
 
 ### [Alchemy Worx][alchemyworx]
-> *Cloud Engineer*, January 2019 - Present
+> *Tech Lead | Cloud/Backend Engineer*, October 2019 - Present
 
-- Lead the construction of the company's backend from scratch, primarily using **Python** on **GCP**.
-- Scheduled **ETL** process through Flask, and enabled internal team to interact with data through **Slackbot API Integration**.
-- Design **CI/CD** pipelines to improve building processes.
-- Internal and client-facing **report generation** on the fly. Web-based, interactive dashboards on the way!
-- **Constant communication** with the strategy team to find out how they use their tools and what they need to do their job better.
-- Optimize emailing schemes and strategy by collaboratively planning/interpreting **A/B test** results and email audience segmentation. 
+I wore many hats at this medium-sized start-up! After **encouraging the CEO** to pursue modern techniques in data collection and processing, **I lead a small development team** in several disciplines. Expanding on my previous work at SellUP (below), I outlined the **cloud architecture** for wide-scale **ETL pipelines** from our data partners, organized the **serverless** mechanisms & **CI/CD** on **Google Cloud Platform**, and spearheaded the creation of a **custom CRM platform** on top of the existing open-source Odoo project with **integrations** to our other internal tools.
+
+### [Alchemy Worx (formerly SellUP))][alchemyworx]
+> *Data Analyst*, January 2019 - October 2019
+
+I optimized emailing schemes and strategies by **collaboratively** planning and interpreting **AB testing** results from email audience segmentation tests. I **accelerated the turn-around time** on client-facing reports by automating much of the routine analytical work with **Pandas** and scripts which **interacted with our partner APIs**. The effect was a manual process which took a coworker 4 hours shrunk to a 1 hour task. Client experience was further improved with **dynamic dashboards** and small, custom web services.
 
 ### Freelance Developer
 > *Data-Journalist*, July 2018 - Present
 
-- Provide research and **analytical support** for online publications
-- **Visualize** journalistic story-lines for deeper understanding of the underlying data.
-- Used **data-mining** techniques on **unstructured** data to produce new sets for analysis and visualization using **BeautifulSoup** and custom-tuned **OCR** technologies.
+I leaned on **Python** as my primary language of choice for analysis and automation to create automatically updating **analytical dashboards** for online publications like The Pudding. Story pitch prototypes were visualized and produced using **D3.js** and **Pandas**. Further tooling to get jobs done included data mining techniques in **web-scraping with BeautifulSoup** and custom-tuned **OCR through Tensorflow**.
 
 ### [Agilex Fragrances][agilex]
 > *Perfume Technician | Perfumer-In-Training*, August 2016 - January 2019
 
-- Managed spectral data library and groomed data for analysis.
-- Produced datasets for in-house usage to streamline analysis.
-- Created custom macros in proprietary scripting language to automate  analytical techniques for quicker project turn-around.
-- Designed and reformulated original fragrances.
+I supported technical analysis on perfume to reverse engineer fragrances. I produced, groomed, and **maintained datasets** for in-house usage and created custom macros in a **proprietary scripting language** to automate analytical techniques for **quicker project turn-around**.
 
 ___
 
@@ -35,7 +30,7 @@ ___
 
 ### Languages
 In order of fluency:
-:   Python, Bash, SQL, Javascript, Nim, Go
+:   Python, SQL, Bash, Javascript, Nim, Go
 
 ### Platforms | Tools
 Google Cloud Platform, Serverless Architecture, MySQL
